@@ -44,11 +44,12 @@ app.use("/", uploadRoute);
 const saleRoute = require("./routes/sale.routes");
 app.use("/", saleRoute);
 
-// show image
+// show images
 app.use("/upload", express.static("./uploads"));
 
 const startServer = async () => {
   await db;
+  console.log('hello me')
   app.listen(8000, () => {
     console.log("server is running on port 8000 http://localhost:8000");
   });
